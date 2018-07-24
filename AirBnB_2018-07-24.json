@@ -1,0 +1,325 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-07-24T16:21:04.762Z",
+	"__export_source": "insomnia.desktop.app:v5.16.6",
+	"resources": [
+		{
+			"_id": "wrk_c980b1772c2e40049332105a12bcc800",
+			"created": 1528822136220,
+			"description": "",
+			"modified": 1530578359677,
+			"name": "AirBnB",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_39bdfd60daef4c5599ebf93493fad299",
+			"color": null,
+			"created": 1528822136288,
+			"data": {
+				"base_url": "http://localhost:3333",
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEzLCJpYXQiOjE1MzI0NDcwNTB9.EnBfoCiRs7ZjYpg5QLXl3XhhvS9J1teaJCf_L4AWU1E"
+			},
+			"isPrivate": false,
+			"modified": 1532447064770,
+			"name": "New Environment",
+			"parentId": "wrk_c980b1772c2e40049332105a12bcc800",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_b68ff290c4b842cba16e2d6332203980",
+			"cookies": [],
+			"created": 1528822136396,
+			"modified": 1528822136396,
+			"name": "Default Jar",
+			"parentId": "wrk_c980b1772c2e40049332105a12bcc800",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_224592c38c644e749adb5ccb4bc463bb",
+			"created": 1530578369664,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1530578369665,
+			"modified": 1530578369664,
+			"name": "Imóveis",
+			"parentId": "wrk_c980b1772c2e40049332105a12bcc800",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_274e262dcb994a669dddf7536f95ec26",
+			"created": 1530579069015,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1530579069015,
+			"modified": 1530579069015,
+			"name": "Auth",
+			"parentId": "wrk_c980b1772c2e40049332105a12bcc800",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_5e8d1548f17d4e029dc800baf95e3565",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"latitude\" : \"-27.200768\",\n\t\"longitude\" : \"-49.624018\"\n}"
+			},
+			"created": 1530578378869,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_0a05533e2b0a4724bd5bf65ef096547a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1530578378869,
+			"method": "GET",
+			"modified": 1532447304283,
+			"name": "Index",
+			"parameters": [],
+			"parentId": "fld_224592c38c644e749adb5ccb4bc463bb",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/properties",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3b4c42b4df754c3fbd73862a004397c6",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1530583491069,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1530359554007,
+			"method": "GET",
+			"modified": 1530583866610,
+			"name": "Show",
+			"parameters": [],
+			"parentId": "fld_224592c38c644e749adb5ccb4bc463bb",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/properties/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f587175dde1e421ab805ba0acbe04f31",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1530584039948,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1530250141576,
+			"method": "DELETE",
+			"modified": 1530584109626,
+			"name": "Delete",
+			"parameters": [],
+			"parentId": "fld_224592c38c644e749adb5ccb4bc463bb",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "\t{{ base_url  }}/properties/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c55baf8935a94545992bf275fddc9a27",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\"title\": \"Rocketseat\",\n\"address\": \"Rua teste, 260\",\n\"longitude\": -49.644018,\n\"latitude\" : -27.210768,\n\"price\": 100\n}"
+			},
+			"created": 1532447100116,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_2b5d252e66d04bd1a172b8aa5a4c9b3d",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532447100116,
+			"method": "POST",
+			"modified": 1532447162219,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_224592c38c644e749adb5ccb4bc463bb",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/properties",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b59fd3ba2ae2472dacb623f618b76a1a",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\"title\": \"Objective\",\n\"address\": \"Rua teste, 260\",\n\"longitude\": -49.644018,\n\"latitude\" : -27.210768,\n\"price\": 200\n}"
+			},
+			"created": 1532447706646,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_112ff7e2627244aaa135caf9593b5de2",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532447706646,
+			"method": "PUT",
+			"modified": 1532447772155,
+			"name": "Update",
+			"parameters": [],
+			"parentId": "fld_224592c38c644e749adb5ccb4bc463bb",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/properties/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_751c8a2da7824547a8881a735727bb3d",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "multipart/form-data",
+				"params": [
+					{
+						"fileName": "/home/diego/Área de Trabalho/Memes/senhordosqueijos.jpg",
+						"id": "pair_8c508227a77747288a7e21a8a49b9ce1",
+						"name": "image[]",
+						"type": "file",
+						"value": ""
+					},
+					{
+						"fileName": "/home/diego/Área de Trabalho/Memes/oculos2.png",
+						"id": "pair_200273944ebd46cfa517c8056bb1d65b",
+						"name": "image[]",
+						"type": "file",
+						"value": ""
+					}
+				]
+			},
+			"created": 1532448298261,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_ddf395e329d845f28387d238debecc05",
+					"name": "Content-Type",
+					"value": "multipart/form-data"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532448298261,
+			"method": "POST",
+			"modified": 1532448376481,
+			"name": "UploadImage",
+			"parameters": [],
+			"parentId": "fld_224592c38c644e749adb5ccb4bc463bb",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/properties/1/images",
+			"_type": "request"
+		},
+		{
+			"_id": "req_9d5a1d072a7445009e1af8bfecfae87b",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"username\": \"sinkz\",\n\t\"email\": \"diih_augusto@live.com\",\n\t\"password\": \"12345\"\n}"
+			},
+			"created": 1530138692882,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_38d56fbe9cac46a98c825f9b9a1cc5df",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1530140729145,
+			"method": "POST",
+			"modified": 1532447043897,
+			"name": "Register",
+			"parameters": [],
+			"parentId": "fld_274e262dcb994a669dddf7536f95ec26",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/users",
+			"_type": "request"
+		},
+		{
+			"_id": "req_7b0af4e36a114a6c9a01ca17a8ba36d1",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"diih_augusto@live.com\",\n\t\"password\": \"12345\"\n}"
+			},
+			"created": 1530140729095,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_20ce7c95321e454192f3df9c391b672e",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1530140729095,
+			"method": "POST",
+			"modified": 1532447027065,
+			"name": "Authentication",
+			"parameters": [],
+			"parentId": "fld_274e262dcb994a669dddf7536f95ec26",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/sessions",
+			"_type": "request"
+		}
+	]
+}
